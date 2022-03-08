@@ -1,0 +1,68 @@
+{'result': [False, False, True], 'song': ('Casual', "I Didn't Mean To", 218.93179), 'log': ('Anna Tatangelo', 'Il Mio Amico', 218.93179)}
+{'result': [False, False, True], 'song': ('Clp', 'Insatiable (Instrumental Version)', 266.39628), 'log': ('Orishas', 'El Kilo', 266.39628)}
+{'result': [False, False, True], 'song': ('Planet P Project', 'Pink World', 269.81832), 'log': ('Animal Collective', 'Summertime Clothes', 269.81832)}
+{'result': [False, False, True], 'song': ('Adam Ant', 'Something Girls', 233.40363), 'log': ('Juanes', 'No Siento Penas', 233.40363)}
+{'result': [False, False, True], 'song': ('Adam Ant', 'Something Girls', 233.40363), 'log': ('Rodrigo y Gabriela', 'VIKING MAN', 233.40363)}
+{'result': [False, False, True], 'song': ('Adam Ant', 'Something Girls', 233.40363), 'log': ('Juanes', 'No Siento Penas', 233.40363)}
+{'result': [False, False, True], 'song': ('Gob', 'Face the Ashes', 209.60608), 'log': ('Kate Ryan', 'La Promesse (Radio Version)', 209.60608)}
+{'result': [True, False, False], 'song': ('Gob', 'Face the Ashes', 209.60608), 'log': ('Gob', 'Ming Tran', 154.17424)}
+{'result': [False, False, True], 'song': ('Richard Souther', 'High Tide', 228.5971), 'log': ('Shinedown', 'Begin Again (Album Version)', 228.5971)}
+{'result': [True, False, False], 'song': ('Blue Rodeo', 'Floating', 491.12771), 'log': ('Blue Rodeo', "Hasn't Hit Me Yet", 310.9873)}
+{'result': [False, False, True], 'song': ('Bob Azzam', 'Auguri Cha Cha', 191.84281), 'log': ('Jadakiss / Swizz Beatz / OJ Da Juiceman', "Who's Real", 191.84281)}
+{'result': [False, False, True], 'song': ('Bob Azzam', 'Auguri Cha Cha', 191.84281), 'log': ('Natalie Walker', 'Colorblind', 191.84281)}
+{'result': [False, False, True], 'song': ('Bob Azzam', 'Auguri Cha Cha', 191.84281), 'log': ('The Red Jumpsuit Apparatus', 'Face Down (Album Version)', 191.84281)}
+{'result': [False, False, True], 'song': ('Bob Azzam', 'Auguri Cha Cha', 191.84281), 'log': ('Amy Winehouse', 'Just Friends', 191.84281)}
+{'result': [False, False, True], 'song': ('Bob Azzam', 'Auguri Cha Cha', 191.84281), 'log': ('The Red Jumpsuit Apparatus', 'Face Down (Album Version)', 191.84281)}
+{'result': [True, False, False], 'song': ('Jimmy Wakely', 'Broken-Down Merry-Go-Round', 151.84934), 'log': ('Jimmy Wakely', 'I Love You So Much It Hurts', 165.74649)}
+{'result': [True, False, False], 'song': ('Lionel Richie', 'Tonight Will Be Alright', 307.3824), 'log': ('Lionel Richie', "Don't Wanna Lose You", 301.68771)}
+{'result': [True, False, False], 'song': ('Lionel Richie', 'Tonight Will Be Alright', 307.3824), 'log': ('Lionel Richie', 'Lady', 265.89995)}
+{'result': [False, False, True], 'song': ('Lionel Richie', 'Tonight Will Be Alright', 307.3824), 'log': ('Deftones', 'If Only Tonight We Could Sleep (Remastered Version)', 307.3824)}
+{'result': [False, False, True], 'song': ('Lionel Richie', 'Tonight Will Be Alright', 307.3824), 'log': ('LegiÃ\x83Â£o Urbana', 'Pais E Filhos', 307.3824)}
+{'result': [True, False, False], 'song': ('Lionel Richie', 'Tonight Will Be Alright', 307.3824), 'log': ('Lionel Richie', 'Still', 310.69995)}
+{'result': [True, False, False], 'song': ('Lionel Richie', 'Tonight Will Be Alright', 307.3824), 'log': ('Lionel Richie', 'Hello', 249.62567)}
+{'result': [False, False, True], 'song': ("Mike Jones (Featuring CJ_ Mello & Lil' Bran)", 'Laws Patrolling (Album Version)', 173.66159), 'log': ('Maroon 5', 'Harder To Breathe', 173.66159)}
+{'result': [False, False, True], 'song': ("Mike Jones (Featuring CJ_ Mello & Lil' Bran)", 'Laws Patrolling (Album Version)', 173.66159), 'log': ('Arctic Monkeys', 'Still Take You Home', 173.66159)}
+{'result': [False, False, True], 'song': ("Mike Jones (Featuring CJ_ Mello & Lil' Bran)", 'Laws Patrolling (Album Version)', 173.66159), 'log': ('Seine', 'So far so long', 173.66159)}
+{'result': [False, False, True], 'song': ('Tim Wilson', 'I Think My Wife Is Running Around On Me (Taco Hell)', 186.48771), 'log': ('Nirvana', 'Breed', 186.48771)}
+{'result': [False, False, True], 'song': ('Tim Wilson', 'I Think My Wife Is Running Around On Me (Taco Hell)', 186.48771), 'log': ('Nirvana', 'Breed', 186.48771)}
+{'result': [False, False, True], 'song': ('Tim Wilson', 'I Think My Wife Is Running Around On Me (Taco Hell)', 186.48771), 'log': ('Nirvana', 'Breed', 186.48771)}
+{'result': [False, False, True], 'song': ('Five Bolt Main', 'Made Like This (Live)', 225.09669), 'log': ('The Prodigy', 'Firestarter', 225.09669)}
+{'result': [False, False, True], 'song': ('Five Bolt Main', 'Made Like This (Live)', 225.09669), 'log': ('The Prodigy', 'Firestarter', 225.09669)}
+{'result': [False, False, True], 'song': ('Five Bolt Main', 'Made Like This (Live)', 225.09669), 'log': ('Devotchka', 'Head Honcho', 225.09669)}
+{'result': [True, True, True], 'song': ('Elena', 'Setanta matins', 269.58322), 'log': ('Elena', 'Setanta matins', 269.58322)}
+{'result': [False, False, True], 'song': ('The Shangri-Las', 'Twist and Shout', 164.80608), 'log': ('Billy Bob Thornton and The Peasall Sisters', 'Road to Kaintuck', 164.80608)}
+{'result': [False, False, True], 'song': ('Kenny G featuring Daryl Hall', 'Baby Come To Me', 236.93016), 'log': ('Jack Johnson', 'Bubble Toes', 236.93016)}
+{'result': [False, False, True], 'song': ('Kenny G featuring Daryl Hall', 'Baby Come To Me', 236.93016), 'log': ('Jack Johnson', 'Bubble Toes', 236.93016)}
+{'result': [False, False, True], 'song': ('Kenny G featuring Daryl Hall', 'Baby Come To Me', 236.93016), 'log': ('Jack Johnson', 'Bubble Toes', 236.93016)}
+{'result': [False, False, True], 'song': ('Kenny G featuring Daryl Hall', 'Baby Come To Me', 236.93016), 'log': ('Jack Johnson', 'Bubble Toes', 236.93016)}
+{'result': [False, False, True], 'song': ('Kenny G featuring Daryl Hall', 'Baby Come To Me', 236.93016), 'log': ('Will.I.Am', 'Invisible', 236.93016)}
+{'result': [False, False, True], 'song': ('Kenny G featuring Daryl Hall', 'Baby Come To Me', 236.93016), 'log': ('Jack Johnson', 'Bubble Toes', 236.93016)}
+{'result': [False, False, True], 'song': ('Kenny G featuring Daryl Hall', 'Baby Come To Me', 236.93016), 'log': ('Jack Johnson', 'Bubble Toes', 236.93016)}
+{'result': [False, False, True], 'song': ('John Davis', 'Knocked Out Of The Park', 183.17016), 'log': ('Ressurrection Band', 'First Degree Apathy', 183.17016)}
+{'result': [False, False, True], 'song': ('Glad', 'Blessed Assurance', 270.602), 'log': ('CÃ\x83Â³mplices', 'Es Por Ti', 270.602)}
+{'result': [True, False, False], 'song': ('Trafik', 'Salt In NYC', 424.12363), 'log': ('Trafik', 'Dirty Word', 380.21179)}
+{'result': [False, False, True], 'song': ('Backstreet Boys', 'Larger Than Life', 236.25098), 'log': ('Lifehouse', 'All In', 236.25098)}
+{'result': [False, False, True], 'song': ('Casual', 'OAKtown', 259.44771), 'log': ('Slipknot', 'Eyeless (Live version) (Album Version)', 259.44771)}
+{'result': [False, False, True], 'song': ('Casual', 'OAKtown', 259.44771), 'log': ('Angels and Airwaves', 'Sirens', 259.44771)}
+{'result': [False, False, True], 'song': ('Mitch Ryder', 'Jenny Take a Ride', 207.43791), 'log': ('Two Door Cinema Club', 'Costume Party', 207.43791)}
+{'result': [False, False, True], 'song': ('Mitch Ryder', 'Jenny Take a Ride', 207.43791), 'log': ('Two Door Cinema Club', 'Costume Party', 207.43791)}
+{'result': [False, False, True], 'song': ('Steel Rain', 'Loaded Like A Gun', 173.19138), 'log': ('America', 'Work To Do', 173.19138)}
+{'result': [True, False, False], 'song': ('Tom Petty', 'A Higher Place (Album Version)', 236.17261), 'log': ('Tom Petty', "Runnin' Down A Dream", 263.23546)}
+{'result': [True, False, False], 'song': ('Tom Petty', 'A Higher Place (Album Version)', 236.17261), 'log': ('Tom Petty', 'Square One (Album Version)', 204.82567)}
+{'result': [True, False, False], 'song': ('Tom Petty', 'A Higher Place (Album Version)', 236.17261), 'log': ('Tom Petty', "Runnin' Down A Dream", 263.23546)}
+{'result': [True, False, False], 'song': ('Tom Petty', 'A Higher Place (Album Version)', 236.17261), 'log': ('Tom Petty', "Runnin' Down A Dream", 263.23546)}
+{'result': [False, False, True], 'song': ('Los Manolos', 'Rumba De Barcelona', 218.38322), 'log': ('Hellogoodbye;Elliott Yamin', 'Here (In Your Arms) (Radio Edit)', 218.38322)}
+{'result': [False, False, True], 'song': ('Bombay Rockers', 'Wild Rose (Back 2 Basics Mix)', 230.71302), 'log': ('Downhere', 'In America (Album Version)', 230.71302)}
+{'result': [False, False, True], 'song': ('Pucho & His Latin Soul Brothers', 'Got My Mojo Workin', 338.23302), 'log': ('Extrawelt', 'Stammgast', 338.23302)}
+{'result': [True, False, False], 'song': ('Line Renaud', 'Der Kleine Dompfaff', 152.92036), 'log': ('Line Renaud', 'Le Soir', 176.16934)}
+{'result': [True, False, False], 'song': ('Gwen Stefani', 'Harajuku Girls', 290.55955), 'log': ('Gwen Stefani', 'Danger Zone', 216.76363)}
+{'result': [False, True, False], 'song': ('40 Grit', 'Intro', 75.67628), 'log': ('Percubaba', 'Intro', 124.78649)}
+{'result': [False, True, False], 'song': ('40 Grit', 'Intro', 75.67628), 'log': ('Samy Deluxe', 'Intro', 238.36689)}
+{'result': [False, True, False], 'song': ('40 Grit', 'Intro', 75.67628), 'log': ('Calvin Richardson', 'Intro', 76.25098)}
+{'result': [True, False, False], 'song': ('Sophie B. Hawkins', 'The Ballad Of Sleeping Beauty', 305.162), 'log': ('Sophie B. Hawkins', 'Damn I Wish I Was Your Lover', 323.39546)}
+{'result': [False, False, True], 'song': ('Sophie B. Hawkins', 'The Ballad Of Sleeping Beauty', 305.162), 'log': ('The Power Station', 'Some Like It Hot', 305.162)}
+{'result': [True, False, False], 'song': ('Lupe Fiasco', 'Streets On Fire (Explicit Album Version)', 279.97995), 'log': ('Lupe Fiasco', 'Shining Down [feat. Matthew Santos] (Amended Album Version)', 273.94567)}
+{'result': [True, False, False], 'song': ('Lupe Fiasco', 'Streets On Fire (Explicit Album Version)', 279.97995), 'log': ('Lupe Fiasco', 'The Coolest (Explicit Album Version)', 312.92036)}
+{'result': [True, False, False], 'song': ('Lupe Fiasco', 'Streets On Fire (Explicit Album Version)', 279.97995), 'log': ('Lupe Fiasco', 'Shining Down [feat. Matthew Santos] (Amended Album Version)', 273.94567)}
+{'result': [True, False, False], 'song': ('Lupe Fiasco', 'Streets On Fire (Explicit Album Version)', 279.97995), 'log': ('Lupe Fiasco', 'Hurt Me Soul (Explicit Album Version)', 262.89587)}
+{'result': [True, False, False], 'song': ('Lupe Fiasco', 'Streets On Fire (Explicit Album Version)', 279.97995), 'log': ('Lupe Fiasco', 'American Terrorist [feat. Matthew Santos] (Explicit Album Version)', 280.52853)}
