@@ -11,11 +11,11 @@ time_table_drop = "DROP table IF EXISTS time"
 songplay_table_create = ("""
     CREATE TABLE IF NOT EXISTS songplays (
             songplay_id SERIAL PRIMARY KEY, 
-            start_time timestamp NOT NULL,
-            user_id integer NOT NULL, 
+            start_time timestamp NOT NULL REFERENCES time(start_time),
+            user_id integer NOT NULL REFERENCES users(user_id), 
             level varchar NOT NULL, 
-            song_id varchar, 
-            artist_id varchar, 
+            song_id varchar REFERENCES songs(song_id), 
+            artist_id varchar REFERENCES artists(artist_id), 
             session_id varchar, 
             location varchar, 
             user_agent varchar
@@ -36,7 +36,7 @@ song_table_create = ("""
     CREATE TABLE IF NOT EXISTS songs (
             song_id varchar PRIMARY KEY, 
             title varchar NOT NULL, 
-            artist_id varchar NOT NULL, 
+            artist_id varchar NOT NULL REFERENCES artists(artist_id), 
             year integer, 
             duration numeric NOT NULL
         );
@@ -62,29 +62,6 @@ time_table_create = ("""
             year integer, 
             weekday integer
         );
-""")
-
-log_table_create = ("""
-    CREATE TABLE IF NOT EXISTS logs (
-            artist_name varchar,
-            auth varchar,
-            firstName varchar,
-            gender varchar,
-            itemInSession integer,
-            lastName varchar,
-            length numeric,
-            level varchar,
-            location varchar,
-            method varchar,
-            page varchar,
-            registration numeric,
-            sessionId varchar,
-            song varchar,
-            status integer,
-            ts bigint,
-            userAgent varchar,
-            userId varchar
-    )
 """)
 
 # INSERT RECORDS
@@ -145,29 +122,6 @@ time_table_insert = ("""
         ) VALUES (to_timestamp(%s / 1000.0),%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING;
 """)
 
-log_table_insert = ("""
-    INSERT INTO logs (
-            artist_name,
-            auth,
-            firstName,
-            gender,
-            itemInSession,
-            lastName,
-            length,
-            level,
-            location,
-            method,
-            page,
-            registration,
-            sessionId,
-            song,
-            status,
-            ts,
-            userAgent,
-            userId
-        ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING;
-""")
-
 # FIND SONGS
 
 song_select = ("""
@@ -178,7 +132,5 @@ song_select = ("""
 
 # QUERY LISTS
 
-create_table_queries = [songplay_table_create, user_table_create,
-                        song_table_create, artist_table_create, time_table_create, log_table_create]
-drop_table_queries = [songplay_table_drop, user_table_drop,
-                      song_table_drop, artist_table_drop, time_table_drop]
+create_table_queries = [user_table_create, artist_table_create, song_table_create, time_table_create, songplay_table_create]
+drop_table_queries = [songplay_table_drop, time_table_create, song_table_drop, artist_table_drop, user_table_drop]

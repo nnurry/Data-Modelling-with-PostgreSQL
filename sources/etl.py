@@ -9,15 +9,16 @@ def process_song_file(cur, filepath):
     # open song file
     df = pd.read_json(filepath, lines=True)
     
-    # insert song record
-    song_data = df[['song_id', 'title', 'artist_id', 'year', 'duration']].values.tolist()
-    song_data = [itr for inner in song_data for itr in inner]
-    cur.execute(song_table_insert, song_data)
-
     # insert artist record
     artist_data = df[['artist_id', 'artist_name', 'artist_location', 'artist_latitude', 'artist_longitude']].values.tolist()
     artist_data = [itr for inner in artist_data for itr in inner]
     cur.execute(artist_table_insert, artist_data)
+    
+    # insert song record
+    song_data = df[['song_id', 'title', 'artist_id', 'year', 'duration']].values.tolist()
+    song_data = [itr for inner in song_data for itr in inner]
+    cur.execute(song_table_insert, song_data)
+    
 
 def process_log_file(cur, filepath):
     # open log file
@@ -53,6 +54,7 @@ def process_log_file(cur, filepath):
         
         if results:
             songid, artistid = results
+            # print("result found: {} vs {}".format(results, row))
         else:
             songid, artistid = None, None
 
