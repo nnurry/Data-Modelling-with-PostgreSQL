@@ -1,17 +1,18 @@
 import pandas
 
-song_df = pandas.read_csv('songdata.csv', usecols=[
-                          "song_id", "artist_id", "name", "title", "duration"])
-log_df = pandas.read_csv('logdata.csv', usecols=["name", "title", "duration"])
+song_df = pandas.read_csv(
+    "songdata.csv", usecols=["song_id", "artist_id", "name", "title", "duration"]
+)
+log_df = pandas.read_csv("logdata.csv", usecols=["name", "title", "duration"])
 
 songdata = []
 logdata = []
 
 for index, row in song_df.iterrows():
-    songdata.append((row['name'], row['title'], row['duration']))
+    songdata.append((row["name"], row["title"], row["duration"]))
 
 for index, row in log_df.iterrows():
-    logdata.append((row['name'], row['title'], row['duration']))
+    logdata.append((row["name"], row["title"], row["duration"]))
 
 
 def check(t1, t2):
@@ -27,10 +28,11 @@ for song_row in songdata:
             result.append(song_row)
         if any(check_value):
             other_result.append(
-                {"result": check_value, "song": song_row, "log": log_row})
+                {"result": check_value, "song": song_row, "log": log_row}
+            )
 
 
-with open('test_result.txt', "w") as f:
+with open("test_result.txt", "w") as f:
     for index, row in enumerate(other_result):
         f.write(str(row) + "\n")
 
@@ -39,4 +41,3 @@ f.close()
 print("Result:\nIndex\tMatching data\n")
 for index, res in enumerate(result):
     print("{}\t{}\n".format(index + 1, res))
-

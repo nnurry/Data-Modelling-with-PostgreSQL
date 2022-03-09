@@ -18,6 +18,11 @@ In this project, I've implemented an ETL pipeline using Python to process the da
   - Open terminal in that folder
   - Run `python create_tables.py`
   - Run `python etl.py`
+- Optional steps:
+  - Open the folder `source`
+  - Open `test_query`
+  - Run `python test.py`
+  - Open `test_query_1.csv` and `test_query_2.csv` to see the results
 
 > Run python `create_tables.py` first of all. If you are running .ipynb files and want to drop and create tables again, you have to close the connection to the database since `create_tables.py` doesn't allow other connections to interfere.
 
@@ -26,7 +31,10 @@ In this project, I've implemented an ETL pipeline using Python to process the da
 `sql_queries.py`: contain all the query commands used in `create_tables.py` and `etl.py` 
 `create_tables.py`: contain all the scripts used to drop and create tables
 `etl.py`: contains all the scripts for extracting - transforming - loading data into the database
+`etl.ipynb`: guidance on ETL pipelining
 `test.ipynb`: initially used to make the code foolproof
+
+> **Note**: Other `.py` files are for **debugging** purposes and completely **optional**
 
 ## Database schema design
 
@@ -58,6 +66,7 @@ Here is a sample of 2 kinds of data that this database will perform ETL on, you 
       "duration": 152.92036, 
       "year": 0
    }
+   ...
    data/log_data/../../*.json
    {
       {
@@ -85,27 +94,17 @@ Here is a sample of 2 kinds of data that this database will perform ETL on, you 
 ```
 
 ### The ETL process:
-  - Get all the filepaths in a directory using `os.walk` with the constraint of getting only JSON files:
-```
-   def get_files(filepath):
-      # get all files matching extension from directory
-      all_files = []
-      for root, dirs, files in os.walk(filepath):
-         files = glob.glob(os.path.join(root,'*.json'))
-         for f in files :
-               all_files.append(os.path.abspath(f))
-      return all_files, len(all_files)
-```
-   - Process the files given their path and process function `func` (either processing `songfile` or `logfile`)
+  - Get all the filepaths in a directory using `os.walk` with the constraint of getting only JSON files and process them:
 ```
    def process_data(cur, conn, filepath, func):
       # get all files matching extension from directory
-      all_files, num_files = get_files(filepath)
+      all_files = []
+      ... # -> put into all_files
       
       print('{} files found in {}'.format(num_files, filepath))
       # iterate over files and process
       for i, datafile in enumerate(all_files, 1):
-         func(cur, datafile)
+         func(cur, datafile) # -> process function
          conn.commit()
          print('{}/{} files processed.'.format(i, num_files))
 ```
@@ -117,11 +116,11 @@ def process_song_file(cur, filepath):
    
    # insert artist record
    artist_data = ...
-   cur.execute(artist_table_insert, artist_data) # -> loading into database
+   cur.execute(artist_table_insert, artist_data) # -> loading artistdata into database
    
    # insert song record
    song_data = ...
-   cur.execute(song_table_insert, song_data) # -> loading into database
+   cur.execute(song_table_insert, song_data) # -> loading songdata into database
     
 
 def process_log_file(cur, filepath):
@@ -129,22 +128,20 @@ def process_log_file(cur, filepath):
    df = pd.read_json(filepath, lines=True)
 
    # filter by NextSong action
-   df = ... # -> Transforming (data cleaning)
+   df = ... # -> transforming (data cleaning)
 
-   time_data = ...
-   column_labels = ...
    time_df = ...
    ...
 
    for i, row in time_df.iterrows():
-      cur.execute(time_table_insert, list(row)) # -> loading into database
+      cur.execute(time_table_insert, list(row)) # -> loading timedata into database
 
    # load user table
    user_df = ...
 
    # insert user records
    for i, row in user_df.iterrows():
-      cur.execute(user_table_insert, row) # -> loading into database
+      cur.execute(user_table_insert, row) # -> loading userdata into database
 
    # insert songplay records
    for index, row in df.iterrows():
@@ -156,9 +153,35 @@ def process_log_file(cur, filepath):
       else:
          songid, artistid = None, None
       ...
-      cur.execute(songplay_table_insert, songplay_data) # -> loading into database
+      cur.execute(songplay_table_insert, songplay_data) # -> loading songplaydata into database
 ```
 ## Example queries
 
-[Optional] Provide example queries and results for song play analysis.
-Here's a https://www.markdownguide.org/basic-syntax/guide on Markdown Syntax.*
+1) Get the list of cities which have most **paid** users (for business strategies)
+
+```
+   SELECT location AS city, COUNT(location) AS listener_count 
+      FROM songplays 
+      WHERE level = 'paid' 
+      GROUP BY city 
+      ORDER by listener_count DESC 
+```
+
+<img src="/test_result/test_query/test_query-1.png" width="300" height="450"/>
+
+2) From the results of the query above, let's find the average play per city
+
+```
+    SELECT (query_2.total_play / query_2.number_of_city) AS avg_play_each_city 
+    FROM (
+        SELECT SUM(query_1.listener_count) AS total_play, COUNT(city) AS number_of_city FROM (
+            SELECT location AS city, COUNT(location) AS listener_count 
+            FROM songplays 
+            WHERE level = 'paid' 
+            GROUP BY city 
+            ORDER by listener_count DESC
+            ) query_1
+        ) query_2
+```
+<img src="/test_result/test_query/test_query-2.png" width="200" height="60"/>
+
