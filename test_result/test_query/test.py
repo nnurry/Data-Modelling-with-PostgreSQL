@@ -1,7 +1,7 @@
 import psycopg2
 from test_queries import *
 import csv
-import pandas
+
 def test(cur, conn):
     for index, query in enumerate(queries):
         filename = "test_query_" + str(index + 1) + ".csv"
